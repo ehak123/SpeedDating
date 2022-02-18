@@ -14,3 +14,10 @@
   .backToHome {
     margin: 3rem 0 0;
   }
+
+#adminlogin {
+  color: #05518d;
+  font-size: 0.5rem;
+  float: right;
+  margin: 1px;
+}

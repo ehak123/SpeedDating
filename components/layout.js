@@ -9,10 +9,12 @@ export const siteTitle = 'STH Speed Dating'
 
 export default function Layout({ children, home }) {
   return (
+    <div>
     <div className={utilStyles.container}>
       <header className={styles.header}>
         {home ? (
           <>
+            <section id={styles.container}>
             <Image
               priority
               src="/images/icon400x400.jpg"
@@ -21,6 +23,7 @@ export default function Layout({ children, home }) {
               width={144}
               alt={name}
             />
+            </section>
             <h1 className={utilStyles.heading2Xl}>{name}</h1>
           </>
         ) : (
@@ -53,6 +56,8 @@ export default function Layout({ children, home }) {
           </Link>
         </div>
       )}
+    </div>
+    <div id={styles.adminlogin}> Admin: log in </div>
     </div>
   )
 }

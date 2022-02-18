@@ -18,12 +18,11 @@ export default function Home({ allPostsData }) {
   return (
     <Layout home>
       <Head>
-      <title>{siteTitle}</title>
+      <title> {siteTitle} </title>
       </Head>
       <section className={utilStyles.headingMd}>
         <p>Welcome to Stockholm Speed Dating, your interactive and modern matchmaker-service!</p>
       </section>
-      <main>
       <section className={utilStyles.grid, utilStyles.container}>
               <a href="/testchildren" className={utilStyles.card} disabled={this}>
                 <h3>Become a member today &rarr;</h3>
@@ -35,9 +34,9 @@ export default function Home({ allPostsData }) {
                 <p>Log in in order to sign up to new exiting events</p>
               </a>
 
-              <a href="/up-coming-events" className={utilStyles.card}>
+              <a href="/upcomingevents" className={utilStyles.card}>
                 <h3>Coming Speed Dating events &rarr;</h3>
-                <p>Check out all out fun dating event here!</p>
+                <p>Check out all our fun up-comming event here!</p>
               </a>
       </section>
       <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
@@ -56,7 +55,6 @@ export default function Home({ allPostsData }) {
           ))}
         </ul>
       </section>
-      </main>
     </Layout>
   )
 }
