@@ -39,7 +39,7 @@ export default function Children({ allPostsData }) {
             <p>Ship-o-hoy! Are you a Red October-navy-fan or just a Captain Crook? Lets raise all sails for this navy-themed event!</p>
           </div>
           <br/>
-          <h3>...more events will be added soon! <br></br>Become a member today and do not miss out! </h3>
+          <h3 id = {utilStyles.centertext} >...more events will be added soon! <br></br>Become a member today and do not miss out! </h3>
         </section>
       </main>
     </Layout>

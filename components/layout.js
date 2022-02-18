@@ -57,7 +57,7 @@ export default function Layout({ children, home }) {
         </div>
       )}
     </div>
-    <div id={styles.adminlogin}> Admin: log in </div>
+    <a href = "" id={styles.adminlogin}> Admin: log in </a>
     </div>
   )
 }
