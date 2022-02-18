@@ -1,3 +1,3 @@
-This is a starter template for [Learn Next.js](https://nextjs.org/learn).
-
+install start-setup: npm install
 run server: npm run dev
+
