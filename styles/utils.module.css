@@ -62,6 +62,7 @@
   }
 
   .card {
+    flex: 1;
     margin: 1rem;
     flex-basis: 45%;
     padding: 1.5rem;
@@ -76,8 +77,8 @@
   .card:hover,
   .card:focus,
   .card:active {
-    color: #ac330f;
-    border-color: #ac330f;
+    color: #6b3f7c;
+    border-color: #6b3f7c;
   }
 
   .card h3 {

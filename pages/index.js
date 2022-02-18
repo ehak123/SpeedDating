@@ -25,13 +25,18 @@ export default function Home({ allPostsData }) {
       </section>
       <main>
       <section className={utilStyles.grid, utilStyles.container}>
-              <a href="/become-a-member" className={utilStyles.card}>
-                <h3>Become a member today!&rarr;</h3>
+              <a href="/testchildren" className={utilStyles.card} disabled={this}>
+                <h3>Become a member today &rarr;</h3>
                 <p>Join our dating comunity and find your soulmate</p>
               </a>
 
+              <a href="" className={utilStyles.card}>
+                <h3>Log in &rarr;</h3>
+                <p>Log in in order to sign up to new exiting events</p>
+              </a>
+
               <a href="/up-coming-events" className={utilStyles.card}>
-                <h3>Comming Speed Dating events &rarr;</h3>
+                <h3>Coming Speed Dating events &rarr;</h3>
                 <p>Check out all out fun dating event here!</p>
               </a>
       </section>
