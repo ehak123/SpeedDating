@@ -122,3 +122,13 @@
   #centertext{
     text-align: center;
   }
+  
+  /* TODO: Fix button style */
+  .buttons{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .clickable > button {
+    margin-right: 40px;
+  }

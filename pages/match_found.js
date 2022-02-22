@@ -1,0 +1,42 @@
+import Layout, { siteTitle} from "../components/layout";
+import Link from 'next/link';
+import Head from 'next/head';
+import Profile from "../components/Profile";
+import profileStyle from "../styles/utils.module.css";
+
+// TODO: Add styles 
+export default function Match_found() {
+const siteTitle = 'First Round';
+    return (
+        <Layout>
+        <Head>
+        <title>{siteTitle}</title>
+        </Head>
+            <section className={profileStyle.grid, profileStyle.container}>
+              <div className={profileStyle.card}>
+            <Profile/>
+            </div>
+            </section>
+            <section className={profileStyle.grid, profileStyle.container}>
+            <div className={profileStyle.card}>
+                Go to table number: 5
+                <br/>
+                Status: Berit is waiting at your table
+                <div className={profileStyle.clickable}>
+                <button>I'm at my table</button>
+                <Link href="/">
+                <a>See table locations</a>
+                </Link>
+                </div>
+
+            </div>
+            </section>
+            <section className={profileStyle.grid, profileStyle.container}>
+                  <div className={profileStyle.buttons}>    
+                    <button id="help" >Help</button>
+                    <button id="exit">Exit event</button>
+                </div>
+            </section>
+        </Layout>
+    )
+}
