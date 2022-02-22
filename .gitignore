@@ -6,3 +6,4 @@ dist
 
 # Dev environment
 .DS_store
+.next
