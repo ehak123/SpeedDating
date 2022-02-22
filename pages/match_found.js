@@ -23,7 +23,7 @@ const siteTitle = 'First Round';
                 <br/>
                 Status: Berit is waiting at your table
                 <div className={profileStyle.clickable}>
-                <button>I'm at my table</button>
+                <button id="at-table">I'm at my table</button>
                 <Link href="/">
                 <a>See table locations</a>
                 </Link>
@@ -33,8 +33,8 @@ const siteTitle = 'First Round';
             </section>
             <section className={profileStyle.grid, profileStyle.container}>
                   <div className={profileStyle.buttons}>    
-                    <button id="help" >Help</button>
-                    <button id="exit">Exit event</button>
+                    <button className="help">Help</button>
+                    <button >Exit event</button>
                 </div>
             </section>
         </Layout>

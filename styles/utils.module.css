@@ -124,11 +124,13 @@
   }
   
   /* TODO: Fix button style */
-  .buttons{
-    display: flex;
-    flex-direction: column;
+
+  .help {
+    display: inline-flex;
+    margin-right: 20px;
   }
 
-  .clickable > button {
-    margin-right: 40px;
+  .clickable {
+    margin-top: 20px;
+    margin-right: 20px;
   }
