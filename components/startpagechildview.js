@@ -1,6 +1,6 @@
-import Head from 'next/head'
 import Image from 'next/image'
-import styles from '../components/layout.module.css'
+import startpage from '../styles/startpageview.module.css'
+import startpagechild from '../styles/startpagechildview.module.css'
 import utilStyles from '../styles/utils.module.css'
 import Link from 'next/link'
 
@@ -11,9 +11,9 @@ export const siteTitle = 'STH Speed Dating'
 export function StartPageHeader() {
   return (
     <div className={utilStyles.container}>
-      <header className={styles.header}>
+      <header className={startpage.header}>
         <>
-          <section id={styles.container}>
+          <section id={startpage.container}>
             <Image
               priority
               src="/images/icon400x400.jpg"
@@ -33,7 +33,7 @@ export function StartPageHeader() {
 
 export function StartPageFooter() {
   return (
-    <div className={styles.backToHome}>
+    <div className={startpagechild.backToHome}>
       <Link href="/">
         <a>← Back to home</a>
       </Link>

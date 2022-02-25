@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import Image from 'next/image'
-import styles from '../components/layout.module.css'
+import startpage from '../styles/startpageview.module.css'
 import utilStyles from '../styles/utils.module.css'
 
 import { getSortedPostsData } from '../lib/posts'
@@ -26,9 +26,9 @@ export default function StartPageView({ allPostsData }) {
   return (
     <div>
       <div className={utilStyles.container}>
-        <header className={styles.header}>
+        <header className={startpage.header}>
           <>
-            <section id={styles.container}>
+            <section clasName={startpage.container}>
               <Image
                 priority
                 src="/images/icon400x400.jpg"
@@ -82,7 +82,7 @@ export default function StartPageView({ allPostsData }) {
           </section>
         </main>
       </div>
-      <a href="" id={styles.adminlogin}> Admin: log in </a>
+      <a href="" id={startpage.adminlogin}> Admin: log in </a>
     </div>
   )
 }
