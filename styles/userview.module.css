@@ -71,7 +71,7 @@ html,body, body * {
 
 .navitem {
     margin-left: 5rem;
-    color: rgb(211, 77, 77);
+    color: red;
 }
 
 .navlink{
@@ -112,6 +112,7 @@ html,body, body * {
     .hamburger {
         display: block;
         cursor: pointer;
+        margin: 10px;
     }
 
     .hamburger.active .bar:nth-child(2) {
