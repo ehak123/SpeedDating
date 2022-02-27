@@ -1,13 +1,13 @@
 import Head from 'next/head'
 import utilStyles from '../styles/utils.module.css'
-import { StartPageHeader } from '../components/startpagechildview'
-import { StartPageFooter } from '../components/startpagechildview'
+import { PageHeader } from '../components/startpagechildview'
+import { PageFooter } from '../components/startpagechildview'
 
 export const siteTitle = 'STH Speed Dating'
 
-const headish = StartPageHeader();
+const headish = PageHeader();
 
-const footish = StartPageFooter();
+const footish = PageFooter();
 
 
 export default function UpComingEvents() {

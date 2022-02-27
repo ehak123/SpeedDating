@@ -8,7 +8,7 @@ import Link from 'next/link'
 const name = 'STH Speed Dating'
 export const siteTitle = 'STH Speed Dating'
 
-export function StartPageHeader() {
+export function PageHeader() {
   return (
     <div className={utilStyles.container}>
       <header className={startpage.header}>
@@ -31,7 +31,7 @@ export function StartPageHeader() {
 }
 
 
-export function StartPageFooter() {
+export function PageFooter() {
   return (
     <div className={startpagechild.backToHome}>
       <Link href="/">
