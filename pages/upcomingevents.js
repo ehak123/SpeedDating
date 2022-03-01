@@ -1,26 +1,26 @@
-import Link from 'next/link'
-import Date from '../components/date'
 import Head from 'next/head'
-import Layout, { siteTitle } from '../components/layout'
 import utilStyles from '../styles/utils.module.css'
-import { getSortedPostsData } from '../lib/posts'
+import { PageHeader } from '../components/startpagechildview'
+import { PageFooter } from '../components/startpagechildview'
 
-export async function getStaticProps() {
-  const allPostsData = getSortedPostsData()
-  return {
-    props: {
-      allPostsData
-    }
-  }
-}
+export const siteTitle = 'STH Speed Dating'
 
-export default function Children({ allPostsData }) {
+const headish = PageHeader();
+
+const footish = PageFooter();
+
+
+export default function UpComingEvents() {
   return (
-    <Layout children>
-      <Head>
-        <title>{siteTitle}</title>
-      </Head>
-      <main>
+    <div className={utilStyles.container}>
+      {headish}
+        <main>
+        <Head>
+          <title> {siteTitle} </title>
+        </Head>
+        <section className={utilStyles.headingMd}>
+          <p>Welcome to Stockholm Speed Dating, your interactive and modern matchmaker-service!</p>
+        </section>
         <section className={utilStyles.containerwide}>
           <div className={utilStyles.calendercard}>
             <p className={utilStyles.lighttext}> 2022-04-25 </p>
@@ -38,10 +38,13 @@ export default function Children({ allPostsData }) {
             <h3>Sailors night (gay event)</h3>
             <p>Ship-o-hoy! Are you a Red October-navy-fan or just a Captain Crook? Lets raise all sails for this navy-themed event!</p>
           </div>
-          <br/>
-          <h3 id = {utilStyles.centertext} >...more events will be added soon! <br></br>Become a member today and do not miss out! </h3>
+          <br />
+          <h3 id={utilStyles.centertext} >...more events will be added soon! <br></br>Become a member today and do not miss out! </h3>
         </section>
       </main>
-    </Layout>
+      <footer >
+      {footish}
+      </footer>
+    </div>
   )
 }
