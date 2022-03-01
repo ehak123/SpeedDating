@@ -129,3 +129,13 @@ html,body, body * {
         transform: translateY(-8px) rotate(-45deg);
     }
 }
+
+.centerheader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.ratings {
+    margin: 10px;
+}

@@ -125,12 +125,8 @@
   
   /* TODO: Fix button style */
 
-  .help {
+  .userbutton {
     display: inline-flex;
     margin-right: 20px;
   }
 
-  .clickable {
-    margin-top: 20px;
-    margin-right: 20px;
-  }
