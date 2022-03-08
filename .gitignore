@@ -6,7 +6,7 @@ dist
 
 # Dev environment
 .DS_store
-.next
+.next/
 
 #Eriks temp
 index_old.js
