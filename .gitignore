@@ -3,10 +3,10 @@ node_modules
 
 # Build
 dist
+.next
 
 # Dev environment
 .DS_store
-.next/
 
 #Eriks temp
 index_old.js

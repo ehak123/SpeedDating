@@ -1,7 +1,7 @@
-import {TopLogo} from "../components/top_logo";
+import { TopLogo } from "../components/top_logo";
 import Link from 'next/link';
 import Head from 'next/head';
-import {useRouter} from 'next/router';
+import { useRouter } from 'next/router';
 import BeritProfile from "../components/BeritProfile";
 import profileStyle from "../styles/utils.module.css";
 
@@ -9,36 +9,36 @@ import profileStyle from "../styles/utils.module.css";
 
 // TODO: Add styles 
 export default function Match_found() {
-const siteTitle = 'First Round';
-const router = useRouter()
+    const siteTitle = 'First Round';
+    const router = useRouter()
     return (
         <>
-        <TopLogo/>
-        <title>Hello</title>
-        <Head>
-        <title>{siteTitle}</title>
-        </Head>
+            <TopLogo />
+            <title>Hello</title>
+            <Head>
+                <title>{siteTitle}</title>
+            </Head>
             <section className={profileStyle.grid, profileStyle.container}>
-              <div className={profileStyle.card}>
-            <BeritProfile/>
-            </div>
+                <div className={profileStyle.card}>
+                    <BeritProfile />
+                </div>
             </section>
             <section className={profileStyle.grid, profileStyle.container}>
-            <div className={profileStyle.card}>
-                Go to table number: 5
-                <br/>
+                <div className={profileStyle.card}>
+                    Go to table number: 5
+                <br />
                 Status: Berit is waiting at your table
                 <div>
-                <button type="button" onClick={() => router.push('/ratings')} className={profileStyle.userbutton}>I'm at my table</button>
-                <Link href="/">
-                <a>See table locations</a>
-                </Link>
-                </div>
+                        <button type="button" onClick={() => router.push('/ratings')} className={profileStyle.userbutton}>I'm at my table</button>
+                        <Link href="/">
+                            <a>See table locations</a>
+                        </Link>
+                    </div>
 
-            </div>
+                </div>
             </section>
             <section className={profileStyle.grid, profileStyle.container}>
-                  <div className={profileStyle.buttons}>    
+                <div className={profileStyle.buttons}>
                     <button >Exit event</button>
                 </div>
             </section>

@@ -1,23 +1,23 @@
-import {TopLogo} from "../components/top_logo";
+import { TopLogo } from "../components/top_logo";
 import RatingStars from "../components/RatingStars";
 import Head from 'next/head';
 import user from "../styles/utils.module.css";
 import BeritProfile from "../components/BeritProfile";
 
 export default function Ratings() {
-    const siteTitle = 'First Round completed';
-    return (
-        <>
-        <TopLogo />
+  const siteTitle = 'First Round completed';
+  return (
+    <>
+      <TopLogo />
 
-        <Head>
+      <Head>
         <title>{siteTitle}</title>
-        </Head>
-        <section className={user.grid, user.container}>
+      </Head>
+      <section className={user.grid, user.container}>
         <div className={user.card}>
-      <BeritProfile />
-          </div>
-          </section>
+          <BeritProfile />
+        </div>
+      </section>
 
       <fieldset className='rating-form'>
         <h3>Let us know what you think about your match!</h3>
@@ -39,11 +39,11 @@ export default function Ratings() {
         </div>
 
         <button>
-          Next 
+          Next
         </button>
 
 
       </fieldset>
-      </>
-    )
+    </>
+  )
 }
