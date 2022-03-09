@@ -1,13 +1,16 @@
 import {TopLogo} from "../components/top_logo";
 import Link from 'next/link';
 import Head from 'next/head';
-import Profile from "../components/Profile";
+import {useRouter} from 'next/router';
+import BeritProfile from "../components/BeritProfile";
 import profileStyle from "../styles/utils.module.css";
+
 
 
 // TODO: Add styles 
 export default function Match_found() {
 const siteTitle = 'First Round';
+const router = useRouter()
     return (
         <>
         <TopLogo/>
@@ -17,7 +20,7 @@ const siteTitle = 'First Round';
         </Head>
             <section className={profileStyle.grid, profileStyle.container}>
               <div className={profileStyle.card}>
-            <Profile/>
+            <BeritProfile/>
             </div>
             </section>
             <section className={profileStyle.grid, profileStyle.container}>
@@ -26,7 +29,7 @@ const siteTitle = 'First Round';
                 <br/>
                 Status: Berit is waiting at your table
                 <div>
-                <button className={profileStyle.userbutton}>I'm at my table</button>
+                <button type="button" onClick={() => router.push('/ratings')} className={profileStyle.userbutton}>I'm at my table</button>
                 <Link href="/">
                 <a>See table locations</a>
                 </Link>
@@ -36,7 +39,6 @@ const siteTitle = 'First Round';
             </section>
             <section className={profileStyle.grid, profileStyle.container}>
                   <div className={profileStyle.buttons}>    
-                    <button className={profileStyle.userbutton}>Help</button>
                     <button >Exit event</button>
                 </div>
             </section>

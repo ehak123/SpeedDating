@@ -30,10 +30,15 @@
       "static/chunks/main.js",
       "static/chunks/pages/_error.js"
     ],
-    "/upcomingevents": [
+    "/match_found": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
-      "static/chunks/pages/upcomingevents.js"
+      "static/chunks/pages/match_found.js"
+    ],
+    "/ratings": [
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/ratings.js"
     ]
   },
   "ampFirstPages": []

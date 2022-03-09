@@ -2,7 +2,7 @@ import {TopLogo} from "../components/top_logo";
 import RatingStars from "../components/RatingStars";
 import Head from 'next/head';
 import user from "../styles/utils.module.css";
-import Profile from "../components/Profile";
+import BeritProfile from "../components/BeritProfile";
 
 export default function Ratings() {
     const siteTitle = 'First Round completed';
@@ -15,7 +15,7 @@ export default function Ratings() {
         </Head>
         <section className={user.grid, user.container}>
         <div className={user.card}>
-      <Profile />
+      <BeritProfile />
           </div>
           </section>
 

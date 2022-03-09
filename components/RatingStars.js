@@ -2,15 +2,14 @@ import React, { useState } from 'react'
 import { FaStar } from 'react-icons/fa';
 import user from '../styles/userview.module.css'
 
-//TODO fix so each name is modifiable. Currently can't select multiple values when re-using. 
-
 const RatingStars = () => {
     const [rating, setRating] = useState(null);
     const [hover, setHover] = useState(null);
 
-    return <div>
+    return <>
         {[...Array(5)].map((star, i) => {
             const ratingVal = i + 1;
+
 
             return <label>
                 <input
@@ -28,7 +27,7 @@ const RatingStars = () => {
                     />
             </label>
         })}
-    </div>
+    </>
 }
 export default RatingStars;
 
