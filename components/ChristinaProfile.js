@@ -4,16 +4,15 @@ import profilePic from '../public/images/berit.jpg'
 
 
 //TODO: FIX CSS 
-export default function Profile() {
+export default function ChristinaProfile() {
     return (
         <>
        < div style={{borderRadius:'5px', overflow: 'hidden'}}>
-           <Image src={profilePic} alt="berit" width="200" height="200" objectFit="cover"/>
+           <Image src={profilePic} alt="christina" width="200" height="200" objectFit="cover"/>
        </div>
-        Name: Berit Vacker
+        Name: Christina Green
         <br/>
-        Age: 50 years old
+        Age: 44 years old
        </>
     )
 }
-
