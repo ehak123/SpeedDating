@@ -1,5 +1,5 @@
 import {TopLogo} from "../components/top_logo";
-import RatingBars from "../components/rating_bars";
+import RatingStars from "../components/RatingStars";
 import Head from 'next/head';
 import user from "../styles/utils.module.css";
 import Profile from "../components/Profile";
@@ -16,31 +16,34 @@ export default function Ratings() {
         <section className={user.grid, user.container}>
         <div className={user.card}>
       <Profile />
-      </div>
-      </section>
-      <h3>What do you think about your date?</h3>
-        <section className={user.ratings}>
-        <fieldset className={user.rate}>
+          </div>
+          </section>
 
+      <fieldset className='rating-form'>
+        <h3>Let us know what you think about your match!</h3>
         <div>
-        <p>Matching personality </p>
-        <RatingBars/>
+          <h4>Matching personality</h4>
+          <RatingStars />
+        </div>
+        <div>
+          <h4>Matching values</h4>
+          <RatingStars />
+        </div>
+        <div>
+          <h4>Physical appearance</h4>
+          <RatingStars />
+        </div>
+        <div>
+          <h4>Would you like to go on a second date with this person?</h4>
+          <RatingStars />
         </div>
 
-        <div>
-        <p>Matching values</p>
-        <RatingBars/>
-        </div>
+        <button>
+          Next 
+        </button>
 
-        <div>
-        <p>I would like to meet this person again</p>
-        <RatingBars/>
-        </div>
 
-        <button className={user.userbutton}>Submit</button>
-
-        </fieldset>
-        </section>
+      </fieldset>
       </>
     )
 }
