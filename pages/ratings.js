@@ -13,7 +13,7 @@ export default function Ratings() {
       <Head>
         <title>{siteTitle}</title>
       </Head>
-      <section className={user.grid, user.container}>
+      <section className={(user.grid, user.container)}>
         <div className={user.card}>
           <BeritProfile />
         </div>
