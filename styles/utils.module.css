@@ -202,7 +202,6 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: yellow;
 }
 
 .containerwide {
@@ -215,4 +214,11 @@
 
 #centertext {
   text-align: center;
+}
+
+.adminbuttonbox {
+  display: flex; 
+  align-items:vertical; 
+  justify-content:center;
+  vertical-align: bottom;
 }
