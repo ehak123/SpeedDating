@@ -1,0 +1,62 @@
+.container {
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.Countdown {
+  margin-left: 30px;
+  margin-right: 30px;
+  border: 2px solid grey;
+  border-radius: 4px;
+  padding: 20px;
+  width: 300px;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0 3px 6px rgb(12, 12, 12);
+}
+.Countdown {
+  padding-top: 10px;
+}
+
+.button {
+  background-color: #ffffff;
+  border: solid 1px #000000;
+  border-radius: 4px;
+  padding: 10px 20px;
+  color: #000000;
+  font-size: 16px;
+  margin: 0 5px;
+  cursor: pointer;
+}
+.button:hover {
+  background-color: #c2c2c2;
+}
+.CountdownDisplay {
+  margin-top: 5px;
+  margin-bottom: 20px;
+}
+.CountdownDisplayButton {
+  margin: 0 15px;
+  border: solid 1px transparent;
+  border-radius: 2px;
+  padding: 4px 16px;
+  color: #ffffff;
+
+  font-size: 16px;
+}
+.CountdownDisplay button:hover {
+  background-color: #c2c2c2;
+}
+.CountdownTabel {
+  font-size: 18px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+.CountdownTime {
+  font-size: 36px;
+  margin: 5px 0;
+}
