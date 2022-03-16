@@ -1,0 +1,35 @@
+.mainlayout {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.navbar {
+    width: 100%;
+    height: 4rem;
+    padding: 1rem;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: pink;
+    border-bottom: 5px double lightgrey
+}
+
+.logout {
+    font-size: 110%;
+    position: absolute;
+    right: 1rem;
+}
+
+.content {
+    width: 100%;
+    background-color: lightcoral;
+    align-items: baseline;
+}
+
+.backToHome {
+    margin: 3rem 0 0;
+    position: absolute;
+    bottom: 1rem;
+  }

@@ -45,7 +45,7 @@ html,body, body * {
 
 .navbar {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
 }
 
@@ -90,7 +90,7 @@ html,body, body * {
     .navmenu {
         position: fixed;
         left: -100%;
-        top: 4rem;
+        top: 5rem;
         flex-direction: column;
         background-color: #fff;
         width: 50%;
@@ -99,12 +99,6 @@ html,body, body * {
         transition: 0.3s;
         box-shadow:
             0 10px 27px rgba(0, 0, 0, 0.05);
-    }
-
-    .navbar {
-        position: absolute;
-        left: 0;
-        top: 0;
     }
 
     .navmenu.active {
