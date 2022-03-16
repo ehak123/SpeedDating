@@ -123,10 +123,4 @@
     text-align: center;
   }
   
-  /* TODO: Fix button style */
-
-  .userbutton {
-    display: inline-flex;
-    margin-right: 20px;
-  }
 

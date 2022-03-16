@@ -1,18 +1,22 @@
 import React from 'react'
 import Image from 'next/image'
 import profilePic from '../public/images/berit.jpg'
+import user from '../styles/userongoing.module.css'
 
 
 //TODO: FIX CSS 
 export default function BeritProfile() {
     return (
         <>
-       < div style={{borderRadius:'5px', overflow: 'hidden'}}>
-           <Image src={profilePic} alt="berit" width="200" height="200" objectFit="cover"/>
-       </div>
-        Name: Berit Vacker
-        <br/>
-        Age: 50 years old
+       < section className={user.profile}>
+           <div className={user.img}>
+           <Image src={profilePic} alt="berit" width="430" height="430" objectFit="cover"/>
+           <div className={user.shortinfo}>
+               <p>Name: Berit Bok</p>
+               <p>Age: 50 years old</p>
+           </div>
+           </div>
+       </section>
        </>
     )
 }

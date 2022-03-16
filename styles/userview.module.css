@@ -130,12 +130,6 @@ html,body, body * {
     }
 }
 
-.centerheader {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
 .rates{
     display: none;
 }
@@ -149,3 +143,4 @@ html,body, body * {
 button.rating-form {
     margin: 100px;
 }
+
