@@ -19,7 +19,7 @@ export default function ContactCard(props) {
         image={props.path}
       />
             <CardActions>
-            <IconButton size="large" color="" >
+            <IconButton size="large">
                 <FavoriteIcon />
             </IconButton>
             <IconButton size="large">
