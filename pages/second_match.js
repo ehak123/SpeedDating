@@ -30,13 +30,14 @@ export default function Match_found() {
           <br />
           Status: Nina is on her way to your table
           <div>
-            <button
-              type="button"
-              onClick={() => router.push("/second_rating")}
-              className={profileStyle.userbutton}
-            >
-              I'm at my table
-            </button>
+            <Link href="/second_rating">
+              <button
+                type="button"
+                className={profileStyle.userbutton}
+              >
+                I'm at my table
+              </button>
+            </Link>
             <Link href="/">
               <a>See table locations</a>
             </Link>
