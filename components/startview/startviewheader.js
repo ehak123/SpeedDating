@@ -3,14 +3,14 @@ import startview from '../../styles/startview.module.css'
 import utilStyles from '../../styles/utils.module.css'
 import { siteTitle } from '../../data/metadata'
 
+
 export default function StartViewHeader(props) {
   var sizeValue;
-  if (props.size === 'small') {
+  if (props.size === 'small'){
     sizeValue = 80;
   } else {
     sizeValue = 144; //default
   }
-
   return (
     <header className={[startview.header]}>
       <section className={startview.logo}>
