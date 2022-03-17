@@ -15,22 +15,49 @@ const Home = () => {
       console.log('connected')
     })
 
+    socket.on('server-message', msg => {
+      //setInput(msg);
+      var item = document.createElement('li');
+      item.textContent = msg;
+      messages.appendChild(item);
+      //socket.emit('message', msg);
+    });
+
+    /* we dont wanna update the other's field
     socket.on('update-input', msg => {
       setInput(msg)
     })
+    */
   }
 
   const onChangeHandler = (e) => {
+    e.preventDefault();
     setInput(e.target.value)
-    socket.emit('input-change', e.target.value)
+    //socket.emit('input-change', e.target.value)
+  }
+
+  function handleSubmit(e) {
+    e.preventDefault();
+    if (input) {
+      console.log("hello");
+      console.log(input);
+      socket.emit('client-message', input);
+      setInput('');
+    }
   }
 
   return (
-    <input
-      placeholder="Type something"
-      value={input}
-      onChange={onChangeHandler}
-    />
+    <>
+      <ul id="messages"></ul>
+      <form onSubmit={handleSubmit}>
+        <input
+          placeholder="Type something"
+          value={input}
+          onChange={onChangeHandler}
+        />
+        <button>Send</button>
+      </form>
+    </>
   )
 }
 

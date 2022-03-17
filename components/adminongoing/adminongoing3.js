@@ -1,21 +1,21 @@
 import Head from 'next/head'
-import utilStyles from '../styles/utils.module.css'
-import cd from '../styles/countdown.module.css'
+import utilStyles from '../../styles/utils.module.css'
+import cd from '../../styles/countdown.module.css'
 
-import { PageHeader6 } from '../components/adminongoingview'
-import { AbortButton } from '../components/adminongoingview'
-import { StandardButton } from '../components/adminongoingview'
-import { NextButton6 } from '../components/adminongoingview'
-import Countdown from '../components/Countdown'
-
-
+import { PageHeader3 } from '../adminongoingview'
+import { AbortButton } from '../adminongoingview'
+import { StandardButton } from '../adminongoingview'
+import { NextButton } from '../adminongoingview'
+import Countdown from '../Countdown'
 
 
-export default function AdminOngoing6() {
+
+
+export default function AdminOngoing3() {
   return (
     <>
       <div className={utilStyles.container}>
-        <PageHeader6 />
+        <PageHeader3 />
           <Head>
           </Head>
           <section className={utilStyles.container}>
@@ -36,7 +36,7 @@ export default function AdminOngoing6() {
           <div className={utilStyles.adminbuttonbox}>
             <AbortButton />
             <StandardButton />
-            <NextButton6 />
+            <NextButton />
           </div>
         </>
         )

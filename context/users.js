@@ -1,8 +1,27 @@
+
+import UserProfile from '../components/UserProfile';
+
 export const users = [
     { uid: 0, name: 'anna', admin: true },
-    { uid: 1, name: 'berit', admin: false },
-    { uid: 2, name: 'bertil', admin: false }
+    { uid: 1, name: 'berit', admin: false, path: "/images/berit.jpg", fullname: "Berit Bok", age: "50" },
+    { uid: 2, name: 'bertil', admin: false },
+    { uid: 3, name: 'christina', admin: false },
+    { uid: 4, name: 'nina', admin: false },
 ];
+
+export function getUserFullName(name) {
+    const u = getUserObject(name);
+    return u.fullname;
+}
+
+export function GetUserProfile({name}) {
+    const u = getUserObject({name});
+    return (
+        <>
+            <UserProfile path={u.path} name={u.fullname} age={u.age} />
+        </>
+    )
+}
 
 export function isUser(name) {
     if (!name) {

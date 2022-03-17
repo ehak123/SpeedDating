@@ -1,13 +1,13 @@
 import Head from 'next/head'
-import utilStyles from '../styles/utils.module.css'
-import admin from '../styles/adminongoingview.module.css'
+import utilStyles from '../../styles/utils.module.css'
+import admin from '../../styles/adminongoingview.module.css'
 
-import { PageHeader8 } from '../components/adminongoingview'
-import { AbortButton } from '../components/adminongoingview'
-import { StandardButton } from '../components/adminongoingview'
-import { NextButton8 } from '../components/adminongoingview'
-import { ChangeMatch } from '../components/adminongoingview'
-import { Form } from '../components/adminongoingview'
+import { PageHeader8 } from '../adminongoingview'
+import { AbortButton } from '../adminongoingview'
+import { StandardButton } from '../adminongoingview'
+import { NextButton } from '../adminongoingview'
+import { ChangeMatch } from '../adminongoingview'
+import { Form } from '../adminongoingview'
 
 
 
@@ -34,7 +34,7 @@ export default function AdminOngoing8() {
             <AbortButton />
             <StandardButton />
             <ChangeMatch />
-            <NextButton8 />
+            <NextButton />
           </div>
         </>
         )

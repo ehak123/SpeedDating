@@ -18,26 +18,3 @@ export const TopLogo = ({title = "default title"}) => {
     </header>
   )
 }
-
-
-
-/*
-export const TopLogo = ({title = "default title"}) => { 
-  return (
-    <header className={user.header}>
-    <nav className={user.navbar}>
-        <a className={user.navlogo}> 
-             <Image
-              priority
-              src="/images/icon400x400.jpg"
-              className={utilStyles.borderCircle}
-              height={40}
-              width={40}
-              alt={title}
-            /> 
-        </a>
-        <h1 className={user.centerheader}>{title}</h1>
-    </nav>
-  </header>
-  )
-}*/

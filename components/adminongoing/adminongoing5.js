@@ -1,22 +1,22 @@
 import Head from 'next/head'
-import utilStyles from '../styles/utils.module.css'
-import admin from '../styles/adminongoingview.module.css'
+import utilStyles from '../../styles/utils.module.css'
+import admin from '../../styles/adminongoingview.module.css'
 
-import { PageHeader2 } from '../components/adminongoingview'
-import { AbortButton } from '../components/adminongoingview'
-import { StandardButton } from '../components/adminongoingview'
-import { NextButton2 } from '../components/adminongoingview'
-import { ChangeMatch } from '../components/adminongoingview'
-import { Form } from '../components/adminongoingview'
-
-
+import { PageHeader5 } from '../adminongoingview'
+import { AbortButton } from '../adminongoingview'
+import { StandardButton } from '../adminongoingview'
+import { NextButton } from '../adminongoingview'
+import { ChangeMatch } from '../adminongoingview'
+import { Form } from '../adminongoingview'
 
 
-export default function AdminOngoing2() {
+
+
+export default function AdminOngoing5() {
   return (
     <>
       <div className={utilStyles.container}>
-        <PageHeader2 />
+        <PageHeader5 />
           <Head>
           </Head>
           <section className={utilStyles.container}>
@@ -34,7 +34,7 @@ export default function AdminOngoing2() {
             <AbortButton />
             <StandardButton />
             <ChangeMatch />
-            <NextButton2 />
+            <NextButton />
           </div>
         </>
         )

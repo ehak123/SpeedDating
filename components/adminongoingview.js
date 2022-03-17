@@ -1,8 +1,13 @@
 import admin from '../styles/adminongoingview.module.css'
 import Link from 'next/link'
 import { useState, useEffect } from 'react';
+import { useEventContext } from "../context/eventcontext";
+import { useEventDispatchContext } from '../context/eventcontext';
 
-export function PageHeader1() {
+export function PageHeader1(props) {
+
+  
+
   return (
     <>
       <div className={admin.container}>
@@ -264,20 +269,31 @@ export function ChangeMatch() {
 
 
 
-export function NextButton1() {
+
+export function NextButton() {
+
+  const state = useEventContext();
+  const dispatch = useEventDispatchContext();
+  
+  function handleClick() { 
+  dispatch({
+    type: 'NEXTPAGE'
+  });
+}
+
   return (
     <>
-      <button className={admin.buttonGreen}>
+      <button className={admin.buttonGreen} onClick={handleClick}>
         <slot>
-          <Link href="./adminongoing2">
+          
             Nästa &#8594;
-          </Link>
+          
         </slot>
       </button>
     </>
   )
 }
-
+/*
 export function NextButton2() {
   return (
     <>
@@ -390,3 +406,5 @@ export function NextButton9() {
     </>
   )
 }
+
+*/
