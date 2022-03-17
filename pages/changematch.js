@@ -88,8 +88,8 @@ function ChangeMatch() {
   }
 
   return (
-      <div>
       <>    
+      <div>
         <>
         <StartViewHeader size="small"/>
          <h3 id={utilStyles.centertext} >
@@ -97,13 +97,14 @@ function ChangeMatch() {
             change the matching-result manually with drag and drop
             <br />         
         </h3>        
-        
+        </>
+
+
         <Head>
         <title>Change Match</title>
         </Head>
-        </>
-    
         
+        <>
         <div className={cm.container}>
             <br />         
             <div className={cm.dndbox}>
@@ -166,6 +167,7 @@ function ChangeMatch() {
 
         </>
     </div>
+    </>
   );
 }
 
