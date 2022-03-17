@@ -222,3 +222,6 @@
   justify-content:center;
   vertical-align: bottom;
 }
+  #centertext{
+    text-align: center;
+  }

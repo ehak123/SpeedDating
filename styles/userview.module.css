@@ -135,3 +135,18 @@ html,body, body * {
         transform: translateY(-8px) rotate(-45deg);
     }
 }
+
+.rates{
+    display: none;
+}
+
+
+.star {
+    cursor: pointer;
+    transition: color 200ms;
+}
+
+button.rating-form {
+    margin: 100px;
+}
+
