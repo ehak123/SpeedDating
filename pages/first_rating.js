@@ -3,18 +3,18 @@ import RatingStars1 from "../components/RatingStars";
 import RatingStars2 from "../components/RatingStars";
 import RatingStars3 from "../components/RatingStars";
 import RatingStars4 from "../components/RatingStars";
-import { useRouter } from 'next/router';
-import Head from 'next/head';
+import { useRouter } from "next/router";
+import Head from "next/head";
 import user from "../styles/userongoing.module.css";
 import BeritProfile from "../components/BeritProfile";
 
 export default function Ratings() {
-  const siteTitle = 'First Round completed';
-  const router = useRouter()
-  
+  const siteTitle = "First Round completed";
+  const router = useRouter();
+
   return (
     <>
-      <TopLogo title="First round completed"/>
+      <TopLogo title="First round completed" />
 
       <Head>
         <title>{siteTitle}</title>
@@ -44,11 +44,14 @@ export default function Ratings() {
           <RatingStars4 />
         </div>
 
-        <button type="button" onClick={() => router.push('/second_match')} className= {user.userbutton}  >
+        <button
+          type="button"
+          onClick={() => router.push("/second_match")}
+          className={user.userbutton}
+        >
           Go to next round
         </button>
-
       </section>
     </>
-  )
+  );
 }

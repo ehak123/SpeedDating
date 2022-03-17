@@ -6,7 +6,7 @@ import RatingStars4 from "../components/RatingStars";
 import { useRouter } from 'next/router';
 import Head from 'next/head';
 import user from "../styles/userongoing.module.css";
-import NinaProfile from "../components/NinaProfile";
+import UserProfile from "../components/UserProfile";
 
 export default function Ratings() {
   const siteTitle = 'Second Round completed';
@@ -21,7 +21,7 @@ export default function Ratings() {
       </Head>
       <section>
         <div className={user.card}>
-          <NinaProfile />
+          <UserProfile path="https://images.unsplash.com/photo-1603691436755-354a2d9b4bb5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTI1fHx3b21hbiUyMGhpa2V8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60" name="Nina Nice" age="36"/>
         </div>
       </section>
 

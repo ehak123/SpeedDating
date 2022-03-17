@@ -6,6 +6,7 @@ import { IconButton } from '@material-ui/core';
 import Card from '@mui/material/Card';
 import CardMedia from '@mui/material/CardMedia';
 import Box from '@mui/material/Box';
+import {CardActionArea, CardActions } from '@mui/material';
 
 
 export default function ContactCard(props) {
@@ -17,15 +18,15 @@ export default function ContactCard(props) {
         sx={{ height: 300, width: 300 }}
         image={props.path}
       />
-        <Box sx={{ display: 'flex', flexDirection: 'row' }}>
-            <IconButton>
+            <CardActions>
+            <IconButton size="large" color="" >
                 <FavoriteIcon />
             </IconButton>
-            <IconButton>
+            <IconButton size="large">
                 <HighlightOffIcon />
             </IconButton>
-        </Box>
-    </Card>
+            </CardActions>
+         </Card>
     );
 }
 
