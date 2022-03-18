@@ -3,24 +3,20 @@ import UserProfile from '../components/UserProfile';
 
 export const users = [
     { uid: 0, name: 'anna', admin: true },
-    { uid: 1, name: 'berit', admin: false, path: "/images/berit.jpg", fullname: "Berit Bok", age: "50" },
+    { uid: 1, name: 'berit', admin: false, path: "/images/berit.jpg", firstname: "Berit", lastname: "Bok", age: "50" },
     { uid: 2, name: 'bertil', admin: false },
-    { uid: 3, name: 'christina', admin: false },
-    { uid: 4, name: 'nina', admin: false },
+    { uid: 3, name: 'christina', admin: false, path: "/images/christina.jpg", firstname: "Christina", lastname: "Tech", age: "40" },
+    { uid: 4, name: 'nina', admin: false, path: "/images/Nina.jpg", firstname: "Nina", lastname: "Nice", age: "36" },
 ];
 
-export function getUserFullName(name) {
-    const u = getUserObject(name);
-    return u.fullname;
+export function getUserFirstName(name) {
+    const u = getUserInfo(name);
+    return u.firstname;
 }
 
-export function GetUserProfile({name}) {
-    const u = getUserObject({name});
-    return (
-        <>
-            <UserProfile path={u.path} name={u.fullname} age={u.age} />
-        </>
-    )
+export function getUserFullName(name) {
+    const u = getUserInfo(name);
+    return u.firstname + ' ' + u.lastname;
 }
 
 export function isUser(name) {
@@ -37,7 +33,7 @@ export function isUser(name) {
 
 export function isUserAdmin(name) {
     if (isUser(name)) {
-        const u = getUserObject(name);
+        const u = getUserInfo(name);
         return (u.admin === true);
     } else {
         return false;
@@ -55,7 +51,7 @@ export function getUserRank(name) {
     }
 }
 
-function getUserObject(name) {
+export function getUserInfo(name) {
     for (let u of users) {
         if (u.name === name) {
             return u;

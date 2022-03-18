@@ -1,41 +1,39 @@
 import Head from 'next/head'
 import utilStyles from '../../styles/utils.module.css'
-import cd from '../../styles/countdown.module.css'
+import admin from './adminevent.module.css'
 
-import { PageHeader9 } from '../adminongoingview'
-import { AbortButton } from '../adminongoingview'
-import { StandardButton } from '../adminongoingview'
-import { NextButton } from '../adminongoingview'
-import Countdown from '../Countdown'
+import { PageHeader8 } from './AdminButtons'
+import { AbortButton } from './AdminButtons'
+import { StandardButton } from './AdminButtons'
+import { NextButton } from './AdminButtons'
+import { ChangeMatch } from './AdminButtons'
+import { Form } from './AdminButtons'
 
 
 
 
-export default function AdminOngoing9() {
+export default function AdminOngoing8() {
   return (
     <>
       <div className={utilStyles.container}>
-        <PageHeader9 />
+        <PageHeader8 />
           <Head>
           </Head>
           <section className={utilStyles.container}>
             <h3 id={utilStyles.centertext} >
               <br /> <br />
-              DATE PÅGÅR <br />
-              (använd timern för att hålla koll på tiden)
+              Gå vidare för att presentera matchning med standardmeddelande <br /> eller anpassa texten nedan för tematiska event:
             </h3>
             <br />
-            <div className={cd.container}>
-              <Countdown />
-            </div>
-            <br />
           </section>
+          <Form className={admin.form}/>
       </div>
          
           <br />
           <div className={utilStyles.adminbuttonbox}>
             <AbortButton />
             <StandardButton />
+            <ChangeMatch />
             <NextButton />
           </div>
         </>

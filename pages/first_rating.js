@@ -5,7 +5,7 @@ import RatingStars3 from "../components/RatingStars";
 import RatingStars4 from "../components/RatingStars";
 import { useRouter } from "next/router";
 import Head from "next/head";
-import user from "../styles/userongoing.module.css";
+import profileStyle from "../components/event_user/userevent.module.css";
 import UserProfile from "../components/UserProfile";
 
 export default function Ratings() {
@@ -21,7 +21,7 @@ export default function Ratings() {
       </Head>
       <section>
         <div className={user.card}>
-        <UserProfile path="https://images.unsplash.com/photo-1593339915213-a94e3b1a0f64?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTI5fHx3b21hbiUyMGNhdHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" name="Berit Bok" age="50" />
+        <UserProfile name="berit" />
         </div>
       </section>
 

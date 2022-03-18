@@ -1,4 +1,4 @@
-import { createContext, useContext, useReducer } from 'react'
+import { createContext, useContext, useState, useReducer } from 'react'
 
 // Contexts
 const EventContext = createContext(null);
@@ -15,7 +15,8 @@ export function useEventDispatchContext() {
 // Initial state
 const initialState = {
     eventOn: false,
-    currentPage: 1,
+    finished: false,
+    step: 1,
 }
 
 // Provider
@@ -37,8 +38,18 @@ export default function eventReducer(state, action) {
         case 'START_EVENT':
             state.eventOn = true;
             return state;
-        case 'NEXTPAGE':
-            state.currentPage++;
+        case 'NEXTSTEP':
+            state.step++;
+            console.log("Entering Step " + state.step);
+            return state;
+        case 'FINISH_EVENT':
+            state.eventOn = false;
+            state.finished = true;
+            return state;
+        case 'EVENT_RESET':
+            state.step = 1;
+            state.eventOn = false;
+            state.finished = false;
             return state;
         default:
             throw new Error();

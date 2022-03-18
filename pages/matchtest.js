@@ -3,7 +3,7 @@ import Link from "next/link";
 import Head from "next/head";
 import { useRouter } from "next/router";
 import UserProfile from "../components/UserProfile";
-import profileStyle from "../styles/userongoing.module.css";
+import profileStyle from "../components/event_user/userevent.module.css";
 
 // TODO: Add styles
 export default function Match_found() {
@@ -19,7 +19,7 @@ export default function Match_found() {
       <section>
         <div className={profileStyle.card}>
           <h1> Berit is your second match </h1>
-          <UserProfile path="/images/berit.jpg" name="Berit Bok" age="50" />
+          <UserProfile name="berit" />
         </div>
       </section>
 

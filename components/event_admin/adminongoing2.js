@@ -1,15 +1,12 @@
 import Head from 'next/head'
 import utilStyles from '../../styles/utils.module.css'
-import admin from '../../styles/adminongoingview.module.css'
+import admin from './adminevent.module.css'
 
-import { PageHeader2 } from '../adminongoingview'
-import { AbortButton } from '../adminongoingview'
-import { StandardButton } from '../adminongoingview'
-import { NextButton } from '../adminongoingview'
-import { ChangeMatch } from '../adminongoingview'
-import { Form } from '../adminongoingview'
-
-
+import ProgressBar from './ProgressBar'
+import { AbortButton, StandardButton } from './AdminButtons'
+import NextButton from './NextButton'
+import ChangeMatch from './ChangeMatch'
+import Form from './AdminForm'
 
 
 export default function AdminOngoing2() {

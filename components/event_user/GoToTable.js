@@ -1,4 +1,5 @@
-import profileStyle from "../../styles/userongoing.module.css";
+import profileStyle from "./userevent.module.css";
+import Link from "next/link";
 
 export default function GoToTable({ children, tableNumber, waitingName }) {
     return (
@@ -18,9 +19,7 @@ export default function GoToTable({ children, tableNumber, waitingName }) {
                                 I'm at my table
                             </button>
                         </Link>
-                        <Link href="/">
-                            <a>See table locations</a>
-                        </Link>
+                        <a>See table locations</a>
                     </div>
                 </div>
             </section>

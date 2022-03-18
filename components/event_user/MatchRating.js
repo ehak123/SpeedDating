@@ -4,10 +4,10 @@ import RatingStars2 from "../components/RatingStars";
 import RatingStars3 from "../components/RatingStars";
 import RatingStars4 from "../components/RatingStars";
 import Head from "next/head";
-import user from "../styles/userongoing.module.css";
+import user from "./userevent.module.css";
 import UserProfile from "../components/UserProfile";
 
-export default function MatchRating({round}) {
+export default function MatchRating({round, matchname}) {
 
   var siteTitle;
   if (round === 1) {
@@ -29,7 +29,7 @@ export default function MatchRating({round}) {
       </Head>
       <section>
         <div className={user.card}>
-        <GetUserProfile name={matchname} />
+        <UserProfile name={matchname} />
         </div>
       </section>
 

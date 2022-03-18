@@ -1,7 +1,7 @@
-import MatchFound from "../components/userongoing/MatchFound";
+import MatchFound from "../components/event_user/MatchFound";
 import { useLoginContext } from "../context/logincontext";
-import UserEvent from "../components/userongoing/userevent";
-import AdminEvent from "../components/adminongoing/adminevent";
+import UserEvent from "../components/event_user/userevent";
+import AdminEvent from "../components/event_admin/adminevent";
 import Link from "next/link";
 import { EventWrapper } from "../context/eventcontext";
 

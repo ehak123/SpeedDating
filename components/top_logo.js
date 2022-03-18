@@ -1,5 +1,5 @@
 import React from 'react';
-import user from '../styles/userongoing.module.css'
+import user from './event_user/userevent.module.css'
 import Image from 'next/image'
 
 
