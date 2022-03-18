@@ -1,4 +1,4 @@
-import { TopLogo } from "../top_logo";
+import { EventHeader } from "../EventHeader"; 
 import Link from "next/link";
 import Head from "next/head";
 import { useRouter } from "next/router";
@@ -27,7 +27,7 @@ export default function MatchFound({ children, round, matchname }) {
   const router = useRouter();
   return (
     <>
-      <TopLogo title={siteTitle} />
+      <EventHeader title={siteTitle} />
       <Head>
         <title>{siteTitle}</title>
       </Head>
