@@ -8,7 +8,7 @@ import { getUserFirstName, GetUserProfile } from "../../context/users";
 import GoToTable from './GoToTable';
 
 // TODO: Add styles
-export default function MatchFound({ children, round, matchname }) {
+export default function MatchFound({ children, round, matchname, emitFunc }) {
   var siteTitle;
   var tableNo;
 
@@ -42,7 +42,7 @@ export default function MatchFound({ children, round, matchname }) {
         </div>
       </section>
 
-      <GoToTable tableNumber={tableNo} waitingName={matchrealname} />
+      <GoToTable tableNumber={tableNo} waitingName={matchrealname} emitFunc = {emitFunc} />
 
       <div className={profileStyle.exit}>
         <Link href="/">

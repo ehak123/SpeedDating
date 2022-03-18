@@ -17,7 +17,7 @@ const msg1 ="Matching personality";
 const msg2 ="Matching value";
 const msg3 ="Overall impression";
 const msg4 ="Would you like to go on a second date with this person?";
-export default function MatchRating({ round, matchname }) {
+export default function MatchRating({ round, matchname, emitFunc }) {
 
   const dispatch = useEventDispatchContext();
   var siteTitle;

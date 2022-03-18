@@ -60,6 +60,10 @@ export default function Event({ children }) {
             setInput('');
         }
     }
+    function emitFunc(msg) {
+        console.log("Emit:" + msg);
+        socket.emit('eventSignal', msg);
+    }
 
     return (
         <>
@@ -73,10 +77,10 @@ export default function Event({ children }) {
                 </Link>
             </>}
             {state.loggedIn && state.userRank === 'user' && <>
-                <UserEvent />
+                <UserEvent emitFunc = {emitFunc}/>
             </>}
             {state.loggedIn && state.userRank === 'organizer' && <>
-                <AdminEvent />
+                <AdminEvent emitFunc = {emitFunc}/>
                 <ul id="messages"></ul>
                 <form onSubmit={handleSubmit}>
                     <input

@@ -5,26 +5,23 @@ import { useCommContext } from "../../context/commcontext";
 import StartButton from "./buttons/StartButton";
 import HomeFooter from '../layout/homefooter'
 
-export default function AdminEvent() {
+export default function AdminEvent({emitFunc}) {
     const state = useEventContext();
     const dispatch = useEventDispatchContext();
     const commState = useCommContext();
-
-    function startEvent() {
-        console.log("starting event");
-    }
 
     return (
         <>
             <p>/adminevent: Step {state.step}</p>
             <p>/adminevent: Comm step {commState.step}</p>
             <p>Event on: {state.eventOn && "true"}{!state.eventOn && "false"}</p>
+            <br />
             {!state.eventOn && <>
-                <StartButton cb={startEvent} />
+                <StartButton emitFunc={emitFunc}/>
                 <HomeFooter />
             </>}
             {state.eventOn && <>
-                <AdminOngoing step={state.step} />
+                <AdminOngoing emitFunc={emitFunc} step={state.step} />
             </>}
         </>
     )

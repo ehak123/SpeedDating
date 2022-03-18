@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
 import { DragDropContext, Droppable, Draggable } from 'react-beautiful-dnd';
-import Head from 'next/head'
-import StartViewHeader from '../components/startview/startviewheader'
-import utilStyles from '../styles/utils.module.css'
+import Head from 'next/head';
+import StartViewHeader from '../components/startview/startviewheader';
+import utilStyles from '../styles/utils.module.css';
 
-import cm from '../styles/changematch.module.css'
+
+import cm from '../styles/changematch.module.css';
 
 const men = [
   {

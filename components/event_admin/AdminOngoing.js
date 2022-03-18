@@ -10,7 +10,7 @@ import admin from './adminevent.module.css'
 import Countdown from '../Countdown'
 import cd from '../../styles/countdown.module.css'
 
-export default function AdminOngoing({ step }) {
+export default function AdminOngoing({ emitFunc, step }) {
 
   const steps = [
     {
@@ -73,7 +73,7 @@ export default function AdminOngoing({ step }) {
         </>}
       </div>
 
-      <ButtonsField />
+      <ButtonsField emitFunc={emitFunc}/>
     </>
   )
 }

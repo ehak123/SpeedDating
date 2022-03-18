@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import user from './event_user/userevent.module.css'
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import HighlightOffIcon from '@mui/icons-material/HighlightOff';
 import { IconButton } from '@material-ui/core';
