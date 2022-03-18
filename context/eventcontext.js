@@ -101,6 +101,10 @@ export default function eventReducer(state, action) {
             state.step = 9;
             console.log("Entering Step " + state.step);
             return state;
+        case 'STEP10':
+            state.step = 10;
+            console.log("Entering Step " + state.step);
+            return state;
 
 //--------------------------------------
 

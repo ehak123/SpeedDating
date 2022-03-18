@@ -5,6 +5,7 @@ import { useEventContext } from "../../context/eventcontext";
 import { useCommContext } from "../../context/commcontext";
 import HomeFooter from "../layout/homefooter";
 import MatchRating from "./MatchRating";
+import ShareContact from "./ShareContact";
 
 export default function UserEvent({emitFunc})  {
     //const [round, setRound] = useState(1)
@@ -40,7 +41,7 @@ export default function UserEvent({emitFunc})  {
             {state.userstep === 10 && <MatchFound round={round} matchname={"christina"} emitFunc = {emitFunc}/>}
             {state.userstep === 11 && <p>Date 3 Timer</p>}
             {state.userstep === 12 && <MatchRating round={round} matchname={"christina"} emitFunc = {emitFunc}/>}
-            {state.userstep === 13 && <p>Final Rating</p>}
+            {state.userstep === 13 && <ShareContact />}
             </>}
             {!state.eventOn && <>
             <p>Waiting for host</p>

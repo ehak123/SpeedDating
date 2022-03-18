@@ -37,6 +37,10 @@ export default function NextButton({emitFunc}) {
     {
       emitFunc('USER_STEP10')
     }
+    else if(nextStep === 10)
+    {
+      emitFunc('USER_STEP13')
+    }
 
 
     emitFunc('STEP' + nextStep);
