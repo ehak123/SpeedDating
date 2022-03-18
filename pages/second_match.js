@@ -1,9 +1,10 @@
-import { TopLogo } from "../components/top_logo";
 import Link from "next/link";
 import Head from "next/head";
 import { useRouter } from "next/router";
 import UserProfile from "../components/UserProfile";
 import profileStyle from "../components/event_user/userevent.module.css";
+import EventHeader from "../components/EventHeader"
+
 
 // TODO: Add styles
 export default function Match_found() {
