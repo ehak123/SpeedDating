@@ -11,10 +11,12 @@ import {CardActionArea, CardActions } from '@mui/material';
 export default function ContactCard(props) {
     return (
     
-    <Card>
-        <CardMedia
+    <Card raised>
+        <CardMedia 
         component="img"
-        sx={{ height: 300 }}
+        sx={{
+            height: 300,
+        }}
         image={props.path}
       />
             <CardActions>
@@ -30,4 +32,4 @@ export default function ContactCard(props) {
 }
 
 
-
+// https://mui.com/system/the-sx-prop/

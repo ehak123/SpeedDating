@@ -29,7 +29,7 @@ export default function EventHeader({title}) {
 
   return (
       <AppBar elevation={1} className={styles.bar}>
-        <Container className={styles.bar} maxWidth="sx">
+        <Container className={styles.bar} >
         <Toolbar className={styles.bar} >
           <Avatar 
           className = {styles.logo}

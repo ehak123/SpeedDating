@@ -9,6 +9,12 @@ export const users = [
     { uid: 4, name: 'nina', admin: false, path: "/images/Nina.jpg", firstname: "Nina", lastname: "Nice", age: "36" },
 ];
 
+export function getUserWidePicture(name) {
+    const u = getUserInfo(name);
+    const path = u.path;
+    return path.replace(".jpg", "-wide.jpg")
+}
+
 export function getUserFirstName(name) {
     const u = getUserInfo(name);
     return u.firstname;

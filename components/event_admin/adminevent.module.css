@@ -22,7 +22,7 @@
     text-align: center;
     margin: 0 auto 10px auto;
     border-radius: 50%;
-    background-color: white
+    background-color: white;
 }
 .progressbar li:after {
     content: '';

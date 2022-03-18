@@ -3,7 +3,8 @@ import { DragDropContext, Droppable, Draggable } from 'react-beautiful-dnd';
 import Head from 'next/head';
 import StartViewHeader from '../components/startview/startviewheader';
 import utilStyles from '../styles/utils.module.css';
-
+import { matchTwoGroups } from '../components/event_admin/matchingAlg';
+import { useEventContext } from '../context/eventcontext';
 
 import cm from '../styles/changematch.module.css';
 

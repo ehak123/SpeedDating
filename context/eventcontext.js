@@ -18,6 +18,9 @@ const initialState = {
     finished: false,
     step: 1,
     userstep: 1,
+    matchhistory1: [[-1]],
+    matchhistory2: [[-1]],
+    matchhistory3: [[-1]],
 }
 
 // Provider
@@ -62,6 +65,9 @@ export default function eventReducer(state, action) {
             state.userstep = 1;
             state.eventOn = false;
             state.finished = false;
+            matchhistory1 = [[-1]];
+            matchhistory2 = [[-1]];
+            matchhistory3 = [[-1]];
             return state;
 
         //WORKAROUND för NEXTSTEP x2 bug

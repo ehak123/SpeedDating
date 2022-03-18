@@ -87,8 +87,9 @@ const secondMatch = [ [-1,-1,-1,-1,-1], [-1,-1,-1,-1,-1] ];
 */
 // --------------------
 
-function matchTwoGroups(groupLength, firstMatch, secondMatch)
+export function matchTwoGroups(group1, group2, firstMatch, secondMatch)
 {
+    /*
     const group1 = [];
     const group2 = [];
     for(var i = 0; i < groupLength * 2; i = i + 2)
@@ -96,7 +97,7 @@ function matchTwoGroups(groupLength, firstMatch, secondMatch)
         group1[i/2] = i;
         group2[i/2] = i + 1;
     }
-
+    */
     shuffle(group1);
 
     do
