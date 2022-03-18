@@ -1,12 +1,12 @@
 import ContactCard from "../components/ContactCard";
-import { TopLogo } from "../components/top_logo";
+import EventHeader from "../components/EventHeader";
 import Grid from '@mui/material/Grid';
 
 // TODO: Kolla upp varför det inte fungerar med props till statiska bilder. Ladda sedan ner bilderna till public/images
 export default function finalRating() {
     return (
         <>
-            <TopLogo title="Who would you like to connect with?" />
+            <EventHeader title="Who would you like to connect with?" />
             <Grid container rowSpacing={3}>
             <Grid item xs={8}>
             <ContactCard path="https://images.unsplash.com/photo-1573166475912-1ed8b4f093d2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NzN8fHdvbWFuJTIwaW4lMjB0ZWNofGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60" />

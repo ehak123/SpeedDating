@@ -29,7 +29,7 @@ export default function LoginView(props) {
     if (status === 'success') {
         console.log("Redirecting...");
         setTimeout(() => {
-            router.push('/')
+            router.push('/event')
         }, 1500)
     }
 

@@ -1,6 +1,8 @@
 import '../styles/reset.css'
 import '../styles/global.css'
 import { AppWrapper } from '../context/logincontext'
+import { EventWrapper } from '../context/eventcontext'
+import { CommWrapper } from '../context/commcontext'
 import Layout from '../components/layout/mainlayout'
 import Head from 'next/head'
 
@@ -8,9 +10,13 @@ import Head from 'next/head'
 export default function App({ Component, pageProps }) {
   return (
     <AppWrapper>
-      <Layout >
-        <Component {...pageProps} />
-      </Layout>
+      <CommWrapper>
+        <EventWrapper>
+          <Layout nav>
+            <Component {...pageProps} />
+          </Layout>
+        </EventWrapper>
+      </CommWrapper>
     </AppWrapper>
   )
 }

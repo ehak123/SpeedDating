@@ -8,22 +8,23 @@ const SocketHandler = (req, res) => {
     const io = new Server(res.socket.server)
     res.socket.server.io = io
 
-    io.on('connection', socket => {
-      socket.on('client-message', msg => {
-        socket.broadcast.emit('server-message', msg)
-      })
-    })
+    io.on('connection', (socket) => {
+      socket.on('connect', () => {
+        console.log('A client has connected.');
+      });
 
-    io.on('connection', socket => {
-      socket.on('admin-startevent', msg => {
-        socket.broadcast.emit('user-startevent', msg)
-      })
-    })
+      socket.on('disconnect', () => {
+        console.log('A client has disconnected.');
+      });
 
-    io.on('connection', socket => {
-      socket.on('admin-nextstep', msg => {
-        socket.broadcast.emit('user-startevent', msg)
-      })
+      socket.on('message', (msg) => {
+        io.emit('message', msg);
+      });
+      
+      socket.on('eventSignal', (signal) => {
+        console.log("Sending out signal: " + signal);
+        io.emit('eventSignal', signal);
+      });
     })
   }
   res.end()

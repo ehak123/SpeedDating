@@ -17,6 +17,7 @@ const initialState = {
     eventOn: false,
     finished: false,
     step: 1,
+    userstep: 1,
 }
 
 // Provider
@@ -42,12 +43,21 @@ export default function eventReducer(state, action) {
             state.step++;
             console.log("Entering Step " + state.step);
             return state;
+        case 'NEXT_USER_STEP':
+            state.userstep++;
+            console.log("Entering User Step " + state.userstep);
+            return state;
+        case 'NEXT_USER_STEP2':
+            state.userstep++;
+            console.log("Entering User Step2 " + state.userstep);
+            return state;
         case 'FINISH_EVENT':
             state.eventOn = false;
             state.finished = true;
             return state;
         case 'EVENT_RESET':
             state.step = 1;
+            state.userstep = 1;
             state.eventOn = false;
             state.finished = false;
             return state;

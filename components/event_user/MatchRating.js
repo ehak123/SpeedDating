@@ -1,65 +1,75 @@
-import { TopLogo } from "../components/top_logo";
-import RatingStars1 from "../components/RatingStars";
-import RatingStars2 from "../components/RatingStars";
-import RatingStars3 from "../components/RatingStars";
-import RatingStars4 from "../components/RatingStars";
+import EventHeader from "../EventHeader";
+import RatingStars1 from "../RatingStars";
+import RatingStars2 from "../RatingStars";
+import RatingStars3 from "../RatingStars";
+import RatingStars4 from "../RatingStars";
 import Head from "next/head";
 import user from "./userevent.module.css";
-import UserProfile from "../components/UserProfile";
+import UserProfile from "../UserProfile";
+import { useRouter } from "next/router";
+import { useEventDispatchContext } from "../../context/eventcontext";
+import Grid from "@mui/material/Grid";
+import RatingCard from "../RatingCard"
+//TODO: skapa en ny fil i components för RatingCard <- jag kommer inte åt mappstrukturen
 
-export default function MatchRating({round, matchname}) {
 
+const msg1 ="Matching personality";
+const msg2 ="Matching value";
+const msg3 ="Overall impression";
+const msg4 ="Would you like to go on a second date with this person?";
+export default function MatchRating({ round, matchname }) {
+
+  const dispatch = useEventDispatchContext();
   var siteTitle;
   if (round === 1) {
-    siteTitle = "First Round completed";  
+    siteTitle = "First Round completed";
   } else if (round === 2) {
     siteTitle = "Second completed";
   } else if (round === 3) {
     siteTitle = "Third completed";
   }
 
-  const siteTitle = "First Round completed";
+
+
+  const router = useRouter()
+
+  function goNextUser() {
+    dispatch({
+      type: 'NEXT_USER_STEP'
+    });
+    router.push('/event');
+  }
 
   return (
     <>
-      <TopLogo title={siteTitle} />
-
+       <EventHeader title={siteTitle} />
       <Head>
         <title>{siteTitle}</title>
       </Head>
       <section>
         <div className={user.card}>
-        <UserProfile name={matchname} />
+          <UserProfile name={matchname} />
         </div>
       </section>
-
-      <section className={user.card}>
-        <h3>How was your date?</h3>
-        <div>
-          <h4>Matching personality</h4>
-          <RatingStars1 />
-        </div>
-        <div>
-          <h4>Matching values</h4>
-          <RatingStars2 />
-        </div>
-        <div>
-          <h4>Overall impression</h4>
-          <RatingStars3 />
-        </div>
-        <div>
-          <h4>Would you like to go on a second date with this person?</h4>
-          <RatingStars4 />
-        </div>
+      <Grid
+  container
+  direction="column"
+  justifyContent="space-around"
+  alignItems="center"
+>
+<RatingCard message={msg1}/>   
+<RatingCard message={msg2}/>   
+<RatingCard message={msg3}/>   
+<RatingCard message={msg4}/>   
+        </Grid>
 
         <button
           type="button"
-          onClick={() => router.push("/second_match")}
+          onClick={goNextUser}
           className={user.userbutton}
         >
           Go to next round
         </button>
-      </section>
     </>
   );
 }

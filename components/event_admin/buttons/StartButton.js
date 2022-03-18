@@ -3,14 +3,14 @@ import Link from 'next/link'
 import { useEventDispatchContext } from "../../../context/eventcontext";
 import { useRouter } from 'next/router';
 
-export default function StartButton({ cb }) {
+export default function StartButton({ startEvent }) {
     const dispatch = useEventDispatchContext();
     
     // for refreshing the UI since rerendering doesn't seem to work
     const router = useRouter()
 
-    function startEvent() { 
-    cb()
+    function handleClick() { 
+    startEvent()
     /*dispatch({
       type: 'START_EVENT'
     });
@@ -19,7 +19,7 @@ export default function StartButton({ cb }) {
   
     return (
       <>
-        <button className={admin.buttonGreen} onClick={startEvent}>
+        <button className={admin.buttonGreen} onClick={handleClick}>
           <slot>
               Starta event &#8594;
           </slot>

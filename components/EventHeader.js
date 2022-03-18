@@ -24,19 +24,19 @@ const useStyles = makeStyles((theme) => ({
 })
 )
 
-export default function EventHeader({title = "default title"}) {
+export default function EventHeader({title}) {
   const styles = useStyles();
 
   return (
       <AppBar elevation={1} className={styles.bar}>
-        <Container maxWidth="sx">
-        <Toolbar >
+        <Container className={styles.bar} maxWidth="sx">
+        <Toolbar className={styles.bar} >
           <Avatar 
           className = {styles.logo}
-        height={50}
-        width={50}
+        height={60}
+        width={60}
         src="/images/icon400x400.jpg"></Avatar>
-          <Typography variant="h6" className={styles.texttitle}>
+          <Typography variant="h4" className={styles.texttitle}>
             {title}
           </Typography>
         </Toolbar>
