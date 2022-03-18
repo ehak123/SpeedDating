@@ -22,7 +22,7 @@ export default function StartButton({emitFunc}) {
   
     return (
       <>
-        <button className={admin.buttonGreen} onClick={handleClick}>
+        <button className={admin.startButton} onClick={handleClick}>
           <slot>
               Starta event &#8594;
           </slot>

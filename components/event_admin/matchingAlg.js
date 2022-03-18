@@ -87,6 +87,14 @@ const secondMatch = [ [-1,-1,-1,-1,-1], [-1,-1,-1,-1,-1] ];
 */
 // --------------------
 
+export function switchIndex(list, i1, i2)
+{
+    var tmp = list[i1];
+    list[i1] = list[i2];
+    list[i2] = tmp;
+    return list;
+}
+
 export function matchTwoGroups(group1, group2, firstMatch, secondMatch)
 {
     /*
@@ -105,8 +113,9 @@ export function matchTwoGroups(group1, group2, firstMatch, secondMatch)
     shuffle(group2);
     
     }while(!(compareMatch2(group1, group2, firstMatch) && compareMatch2(group1, group2, secondMatch)))
-
-    return [group1, group2];
+    const group1Copy = group1;
+    const group2Copy = group2;
+    return [group1Copy, group2Copy];
 }
 
 
@@ -126,6 +135,11 @@ function compareMatch2(group1, group2, history)
     }
     return goodMatch;
 }
+
+
+
+//console.log(matchTwoGroups(men, women, [[-1]],[[-1]]));
+
 
 /*
     const noHistory = [[-1]];

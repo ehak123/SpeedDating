@@ -9,15 +9,28 @@ export default function Form() {
       "Hej %w!, din nästa träff är med %m vid bord %d."
     )
   
+    const [displayText, setDisplayText] = useState(() => {
+      textarea
+      .replace("%w", "[ANVÄNDARE]")
+      .replace("%m", "[MATCHNAMN]")
+      .replace("%d", "[BORDSNR]")
+    })
+
     const handleChange = (event) => {
       setTextarea(event.target.value)
     }
   
     return (
+      <>
+      <p>{displayText}</p>
       <form className={admin.form}>
         <mat-form-field>
         <textarea className={admin.formtextarea} value={textarea} onChange={handleChange} />
         </mat-form-field>
+        <button>
+          Send
+        </button>
       </form>
+      </>
     )
   }

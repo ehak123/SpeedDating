@@ -67,8 +67,6 @@ export default function Event({ children }) {
 
     return (
         <>
-            <p>/events: Event step: {eventState.step}</p>
-            <p>/events: Comm event step: {commState.step}</p>
             {!state.loggedIn && <>
                 <p>You are not logged in! :(</p>
                 <br />
@@ -77,6 +75,17 @@ export default function Event({ children }) {
                 </Link>
             </>}
             {state.loggedIn && state.userRank === 'user' && <>
+                <UserEvent emitFunc={emitFunc} />
+            </>}
+            {state.loggedIn && state.userRank === 'organizer' && <>
+                <AdminEvent emitFunc={emitFunc} />
+            </>}
+        </>
+    )
+}
+
+/*
+{state.loggedIn && state.userRank === 'user' && <>
                 <UserEvent emitFunc = {emitFunc}/>
             </>}
             {state.loggedIn && state.userRank === 'organizer' && <>
@@ -95,6 +104,4 @@ export default function Event({ children }) {
                 <p>FINISH_EVENT</p>
                 <p>EVENT_RESET</p>
             </>}
-        </>
-    )
-}
+*/

@@ -16,11 +16,13 @@ export function getUserWidePicture(name) {
 }
 
 export function getUserFirstName(name) {
+    console.log(name);
     const u = getUserInfo(name);
     return u.firstname;
 }
 
 export function getUserFullName(name) {
+    console.log(name);
     const u = getUserInfo(name);
     return u.firstname + ' ' + u.lastname;
 }

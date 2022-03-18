@@ -18,9 +18,7 @@ const initialState = {
     finished: false,
     step: 1,
     userstep: 1,
-    matchhistory1: [[-1]],
-    matchhistory2: [[-1]],
-    matchhistory3: [[-1]],
+    changematchbool: false,
 }
 
 // Provider
@@ -50,12 +48,6 @@ export default function eventReducer(state, action) {
             state.userstep++;
             console.log("Entering User Step " + state.userstep);
             return state;
-            /*
-        case 'NEXT_USER_STEP2':
-            state.userstep++;
-            console.log("Entering User Step2 " + state.userstep);
-            return state;
-            */
         case 'FINISH_EVENT':
             state.eventOn = false;
             state.finished = true;
@@ -65,11 +57,18 @@ export default function eventReducer(state, action) {
             state.userstep = 1;
             state.eventOn = false;
             state.finished = false;
-            matchhistory1 = [[-1]];
-            matchhistory2 = [[-1]];
-            matchhistory3 = [[-1]];
+            state.changematchbool = false;
             return state;
 
+        //change match
+        case 'CHANGEBOOLTRUE':
+            state.changematchbool = true;
+            return state;
+        
+        case 'CHANGEBOOLFALSE':
+            state.changematchbool = false;
+            return state;
+        
         //WORKAROUND för NEXTSTEP x2 bug
         case 'STEP1':
             state.step = 1;
@@ -169,6 +168,6 @@ export default function eventReducer(state, action) {
 
         //WORKAROUND end
         default:
-            throw new Error();
+            return state;
     }
 }

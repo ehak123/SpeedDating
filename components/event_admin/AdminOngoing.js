@@ -16,7 +16,8 @@ export default function AdminOngoing({ emitFunc, step }) {
     {
       for_step: [1, 4, 7],
       title: "MATCHNING " + step + " ÄR GJORD",
-      descr: "Gå vidare för att administrera och presentera matchningar.",
+      descr: "Se/ändra matchningar nedan.",
+      extra: "Gå vidare för att administrera och presentera matchningar.",
     },
     {
       for_step: [2, 5, 8],
@@ -30,7 +31,7 @@ export default function AdminOngoing({ emitFunc, step }) {
     },
     {
       for_step: 10,
-      title: "",
+      title: "Eventet är slutfört!",
       descr: "",
     },
   ]

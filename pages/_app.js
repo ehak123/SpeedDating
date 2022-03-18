@@ -12,7 +12,7 @@ export default function App({ Component, pageProps }) {
     <AppWrapper>
       <CommWrapper>
         <EventWrapper>
-          <Layout nav>
+          <Layout>
             <Component {...pageProps} />
           </Layout>
         </EventWrapper>

@@ -13,10 +13,10 @@ import RatingCard from "../RatingCard"
 //TODO: skapa en ny fil i components för RatingCard <- jag kommer inte åt mappstrukturen
 
 
-const msg1 ="Matching personality";
-const msg2 ="Matching value";
-const msg3 ="Overall impression";
-const msg4 ="Would you like to go on a second date with this person?";
+const msg1 = "Matching personality";
+const msg2 = "Matching value";
+const msg3 = "Overall impression";
+const msg4 = "Would you like to go on a second date with this person?";
 export default function MatchRating({ round, matchname, emitFunc }) {
 
   const dispatch = useEventDispatchContext();
@@ -34,15 +34,17 @@ export default function MatchRating({ round, matchname, emitFunc }) {
   const router = useRouter()
 
   function goNextUser() {
-    dispatch({
+    /*dispatch({
       type: 'NEXT_USER_STEP'
-    });
+    });*/
+
     router.push('/event');
   }
-
+  
+  console.log("matchname: " + matchname);
   return (
     <>
-       <EventHeader title={siteTitle} />
+      <EventHeader title={siteTitle} />
       <Head>
         <title>{siteTitle}</title>
       </Head>
@@ -52,24 +54,24 @@ export default function MatchRating({ round, matchname, emitFunc }) {
         </div>
       </section>
       <Grid
-  container
-  direction="column"
-  justifyContent="space-around"
-  alignItems="center"
->
-<RatingCard message={msg1}/>   
-<RatingCard message={msg2}/>   
-<RatingCard message={msg3}/>   
-<RatingCard message={msg4}/>   
-        </Grid>
+        container
+        direction="column"
+        justifyContent="space-around"
+        alignItems="center"
+      >
+        <RatingCard message={msg1} />
+        <RatingCard message={msg2} />
+        <RatingCard message={msg3} />
+        <RatingCard message={msg4} />
+      </Grid>
 
-        <button
-          type="button"
-          onClick={goNextUser}
-          className={user.userbutton}
-        >
-          Go to next round
-        </button>
+      <button
+        type="button"
+        onClick={goNextUser}
+        className={user.userbutton}
+      >
+        Submit
+      </button>
     </>
   );
 }

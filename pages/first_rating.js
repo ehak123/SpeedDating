@@ -1,9 +1,11 @@
 import React from 'react'
-import Dating from "../components/Dating.js"
-function first_rating() {
+import UserTimer from "../components/UserTimer.js"
+import EventHeader from "../components/EventHeader.js"
+function first_rating({siteTitle}) {
   return (
     <div>
-      <Dating />
+      <EventHeader title={siteTitle} />
+      <UserTimer />
     </div>
   )
 }

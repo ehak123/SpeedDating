@@ -8,6 +8,7 @@ import { getUserInfo, getUserFullName } from '../context/users'
 
 //TODO: FIX CSS
 export default function UserProfile({name}) {
+  console.log(name);
   const user = getUserInfo(name);
   const fullname = getUserFullName(name);
 

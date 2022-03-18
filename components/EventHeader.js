@@ -36,7 +36,7 @@ export default function EventHeader({title}) {
         height={60}
         width={60}
         src="/images/icon400x400.jpg"></Avatar>
-          <Typography variant="h4" className={styles.texttitle}>
+          <Typography variant="h5" className={styles.texttitle}>
             {title}
           </Typography>
         </Toolbar>

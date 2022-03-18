@@ -4,10 +4,14 @@ import { useState, useEffect } from 'react';
 import { useEventContext, useDispatchContext } from "../../../context/eventcontext";
 import { useEventDispatchContext } from '../../../context/eventcontext';
 
-export default function AbortButton() {
+export default function AbortButton({emitFunc}) {
+  function exit()
+  {
+    emitFunc('EVENT_RESET');
+  }
     return (
       <>
-        <button className={admin.buttonRed}>
+        <button className={admin.buttonRed} onClick={exit}>
           <slot> Avbryt event </slot>
         </button>
       </>

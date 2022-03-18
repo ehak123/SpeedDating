@@ -5,6 +5,17 @@
   align-items: center;
 }
 
+@media (max-width: 600px) {
+  .links {
+    size: 80%;
+    width: 90%;
+    flex-direction: column;
+  }
+  #adminlogin {
+    display: none;
+  }
+}
+
 .header {
   display: flex;
   flex-direction: column;
@@ -12,7 +23,7 @@
 }
 
 .links {
-  margin-top: 4rem;  
+  margin-top: 4rem;
 }
 
 #adminlogin {
