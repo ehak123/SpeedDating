@@ -9,8 +9,20 @@ const SocketHandler = (req, res) => {
     res.socket.server.io = io
 
     io.on('connection', socket => {
-      socket.on('input-change', msg => {
-        socket.broadcast.emit('update-input', msg)
+      socket.on('client-message', msg => {
+        socket.broadcast.emit('server-message', msg)
+      })
+    })
+
+    io.on('connection', socket => {
+      socket.on('admin-startevent', msg => {
+        socket.broadcast.emit('user-startevent', msg)
+      })
+    })
+
+    io.on('connection', socket => {
+      socket.on('admin-nextstep', msg => {
+        socket.broadcast.emit('user-startevent', msg)
       })
     })
   }

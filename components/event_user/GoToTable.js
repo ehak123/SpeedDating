@@ -1,7 +1,10 @@
 import profileStyle from "./userevent.module.css";
 import Link from "next/link";
+import { useEventDispatchContext } from "../../context/eventcontext";
 
 export default function GoToTable({ children, tableNumber, waitingName }) {
+    const dispatch = useEventDispatchContext();
+
     return (
         <>
             <section>

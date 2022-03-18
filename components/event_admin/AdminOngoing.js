@@ -36,23 +36,19 @@ export default function AdminOngoing({ step }) {
   ]
 
   var index;
-  switch (step) {
-    case (1 || 4 || 7):
+  if (step === 1 || step === 4 || step === 7) {
       index = 0;
-      break;
-    case (2 || 5 || 8):
+  } else if (step === 2 || step === 5 || step === 8) {
       index = 1;
-      break;
-    case (3 || 6 || 9):
+  } else if (step === 3 || step === 6 || step === 9) {
       index = 2;
-      break;
-    case (10):
+  } else if (step === 10) {
       index = 3;
-      break;
-    default:
+  } else{
       console.log("Error on Step: " + step);
       throw new Error("Out of bounds");
   }
+  
 
   return (
     <>

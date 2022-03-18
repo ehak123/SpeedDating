@@ -1,16 +1,32 @@
 import AdminOngoing from "./AdminOngoing";
 import { useState } from "react";
 import { useEventContext, useEventDispatchContext } from "../../context/eventcontext";
+import StartButton from "./buttons/StartButton";
+import SocketChat from '../SocketChat'
+import HomeFooter from '../layout/homefooter'
 
 export default function AdminEvent() {
     const state = useEventContext();
     const dispatch = useEventDispatchContext();
 
+    function startEvent(callbackStartEvent) {
+        dispatch({
+            type: 'START_EVENT',
+        });
+    }
 
     return (
         <>
             <p>Step {state.step}</p>
+            <p>Event on: {state.eventOn && "true"}{!state.eventOn && "false"}</p>
+            {!state.eventOn && <>
+                <StartButton />
+                <SocketChat />
+                <HomeFooter />
+            </>}
+            {state.eventOn && <>
             <AdminOngoing step={state.step} />
+            </>}
         </>
     )
 }

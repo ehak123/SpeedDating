@@ -1,6 +1,7 @@
-import { useEffect, useState } from 'react'
+/*import { useEffect, useState } from 'react'
 import io from 'Socket.IO-client'
 let socket;
+import HomeFooter from '../components/layout/homefooter';
 
 const Home = () => {
   const [input, setInput] = useState('')
@@ -23,11 +24,11 @@ const Home = () => {
       //socket.emit('message', msg);
     });
 
-    /* we dont wanna update the other's field
+     we dont wanna update the other's field
     socket.on('update-input', msg => {
       setInput(msg)
     })
-    */
+    
   }
 
   const onChangeHandler = (e) => {
@@ -57,8 +58,9 @@ const Home = () => {
         />
         <button>Send</button>
       </form>
+      <HomeFooter />
     </>
   )
 }
-
-export default Home;
+*/
+//export default Home;
