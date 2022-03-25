@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import user from '../styles/userongoing.module.css'
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import HighlightOffIcon from '@mui/icons-material/HighlightOff';
 import { IconButton } from '@material-ui/core';
@@ -12,10 +11,12 @@ import {CardActionArea, CardActions } from '@mui/material';
 export default function ContactCard(props) {
     return (
     
-    <Card sx={{ display: 'flex' }}>
-        <CardMedia
+    <Card raised>
+        <CardMedia 
         component="img"
-        sx={{ height: 300, width: 300 }}
+        sx={{
+            height: 300,
+        }}
         image={props.path}
       />
             <CardActions>
@@ -31,4 +32,4 @@ export default function ContactCard(props) {
 }
 
 
-
+// https://mui.com/system/the-sx-prop/

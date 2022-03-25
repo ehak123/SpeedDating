@@ -1,10 +1,10 @@
 .container {
-  min-height: 100vh;
+
   padding: 0 0.5rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-color: aqua;
+
 }
 
 .alignbaseline {
@@ -217,6 +217,9 @@
 }
 
 .adminbuttonbox {
+  position: absolute;
+  bottom: 1rem;
+  margin-top: 20px;
   display: flex; 
   align-items:vertical; 
   justify-content:center;
@@ -224,4 +227,15 @@
 }
   #centertext{
     text-align: center;
+  }
+
+
+  .containerTimer {
+    min-height: 50vh;
+    padding: 0 0.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
   }
